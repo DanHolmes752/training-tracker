@@ -7,10 +7,16 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -26,13 +32,30 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    ShowStartScreen()
+
                 }
             }
         }
     }
 }
-@Preview(showBackground = false, showSystemUi = true)
+
+
+@Composable
+fun ShowDecisionScreen(modifier: Modifier = Modifier) {
+    Column(
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = modifier
+    ) {
+        Button(onClick = { }) {
+            Text(text = "Record Workout")
+        }
+        Button(onClick = { /*TODO*/ }) {
+            Text(text = "View Progress")
+        }
+    }
+}
+
 @Composable
 fun ShowStartScreen(modifier: Modifier = Modifier) {
     Column(
@@ -40,10 +63,10 @@ fun ShowStartScreen(modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = modifier
     ) {
-        Button(onClick = { /*TODO*/ }) {
+        OutlinedButton(onClick = { }) {
             Text(text = "Full Body Split")
         }
-        Button(onClick = { /*TODO*/ }) {
+        ElevatedButton(onClick = { /*TODO*/ }) {
             Text(text = "Upper Lower Split")
         }
         Button(onClick = { /*TODO*/ }) {
@@ -51,4 +74,6 @@ fun ShowStartScreen(modifier: Modifier = Modifier) {
         }
     }
 }
+
+
 
