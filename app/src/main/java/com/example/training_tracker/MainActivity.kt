@@ -38,7 +38,38 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview(showBackground = false, showSystemUi = true)
+@Composable
+fun RecordWorkout() {
+    Column {
+        TextField(
+            value = "Enter Reps",
+            onValueChange = {},
+            label = { Text("Bench Press Set 1") }
+        )
+        TextField(
+            value = "Enter Reps",
+            onValueChange = {},
+            label = { Text("Bench Press Set 2") }
+        )
+        TextField(
+            value = "Enter Reps",
+            onValueChange = {},
+            label = { Text("Bench Press Set 3") }
+        )
+        TextField(
+            value = "Enter Reps",
+            onValueChange = {},
+            label = { Text("Bench Press Set 4") }
+        )
+        TextField(
+            value = "Enter Reps",
+            onValueChange = {},
+            label = { Text("Bench Press Set 5") }
+        )
+    }
+}
 
 @Composable
 fun ShowDecisionScreen(modifier: Modifier = Modifier) {
